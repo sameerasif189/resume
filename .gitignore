@@ -1,0 +1,19 @@
+# Build artifacts that can be regenerated from RESUME.md via build.ps1
+# (Comment these out if you want the PDF tracked in git too — recommended for the resume repo!)
+
+# Leave outputs tracked so recruiters can download directly from github
+# Sameer_Asif_Resume.pdf
+# Sameer_Asif_Resume.docx
+# Sameer_Asif_Resume.txt
+# Sameer_Asif_Resume.html
+
+# OS / editor noise
+Thumbs.db
+.DS_Store
+desktop.ini
+*.swp
+*.swo
+*~
+
+# Cursor / VS Code workspace state (not the settings)
+.vscode/*.code-workspace

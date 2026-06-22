@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.10" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Sameer Asif" />
+  <title>Sameer Asif Resume</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Sameer Asif — Resume</h1>
+<p class="author">Sameer Asif</p>
+</header>
+<h1 id="sameer-asif">Sameer Asif</h1>
+<p>Islamabad, Pakistan · +92 323 5151542 · <a
+href="mailto:sameerasif189@gmail.com">sameerasif189@gmail.com</a>
+GitHub: <a
+href="https://github.com/sameerasif189">github.com/sameerasif189</a> ·
+LinkedIn: <a
+href="https://www.linkedin.com/in/sameer-asif-32113535b/">linkedin.com/in/sameer-asif-32113535b</a></p>
+<h2 id="summary">SUMMARY</h2>
+<p>AI Engineer and final-year BS Artificial Intelligence student at
+FAST-NUCES, currently building production-grade LLM systems at Infigo
+Solutions. Hands-on experience shipping multi-channel RAG agents on
+serverless infrastructure, training generative models (GANs, U-Nets,
+Transformers) in PyTorch, deploying ONNX inference into Unity, and
+building real-time multimodal pipelines for voice cloning, facial
+expression recognition, and wildlife detection. Comfortable owning the
+full lifecycle: data ingestion, model architecture, training, inference
+optimization, FastAPI services, Postgres with pgvector, and React
+UIs.</p>
+<h2 id="skills">SKILLS</h2>
+<ul>
+<li><strong>Languages</strong>: Python, SQL, C/C++,
+JavaScript/TypeScript, HTML/CSS, Bash/PowerShell</li>
+<li><strong>Deep Learning</strong>: PyTorch, Hugging Face Transformers,
+timm, GANs (conditional WaveGAN), U-Net, EfficientNet, Conditional MLPs,
+self-attention from scratch, multi-task learning, multi-scale feature
+fusion, spatial attention</li>
+<li><strong>LLMs and RAG</strong>: Retrieval-Augmented Generation,
+embeddings (pgvector cosine and Postgres FTS hybrid), chunking
+strategies, prompt engineering, intent guardrails, budget and answer
+caching, fine-tuning concepts (SFT, LoRA, alignment)</li>
+<li><strong>Model APIs</strong>: Groq (Llama-3.1-8B-Instant),
+OpenAI-compatible endpoints, Hugging Face Hub, faster-whisper,
+Spark-TTS, MusicGen</li>
+<li><strong>Computer Vision</strong>: OpenCV, albumentations, timm
+backbones, multi-scale detection, COCO datasets, stratified sampling,
+facial expression recognition (DFEW, FERV39k, FER2013, RAF-DB, CK+,
+Aff-Wild2, RAVDESS), wildlife camera-trap detection, real-time webcam
+FX</li>
+<li><strong>Audio</strong>: librosa, soundfile, faster-whisper STT,
+Spark-TTS voice cloning, GAN-based audio synthesis, DSP chains (pitch,
+distortion, reverb, panning)</li>
+<li><strong>Deployment and Optimization</strong>: ONNX, ONNX Runtime,
+Unity Barracuda/Sentis, CUDA 12, mixed precision, gradient accumulation,
+GPU memory budgeting, model warmup and on-demand unload, sub-millisecond
+inference, Vercel serverless</li>
+<li><strong>Backend</strong>: FastAPI, REST, WebSockets, async Python,
+SQLAlchemy, psycopg, Postgres (Neon) with pgvector and FTS, WhatsApp
+Meta API, Slack Events API</li>
+<li><strong>Frontend</strong>: React, Vite, embeddable JavaScript
+widgets, HTML/CSS</li>
+<li><strong>Tools</strong>: Git/GitHub, Conda/Miniconda, Docker (basic),
+Linux/WSL, Windows native CUDA, pandas, NumPy, SciPy, matplotlib,
+seaborn</li>
+</ul>
+<h2 id="experience">EXPERIENCE</h2>
+<p><strong>Junior AI Engineer — Infigo Solutions</strong>, Islamabad,
+Pakistan <em>July 2025 – Present</em></p>
+<ul>
+<li>Lead AI engineer for the company’s customer-support agent platform:
+a multi-channel (web embed, WhatsApp Meta, Slack) FastAPI application
+backed by Neon Postgres with pgvector, deployed on Vercel serverless and
+live on the company marketing site.</li>
+<li>Designed and shipped a hybrid retrieval-augmented generation
+pipeline — text chunking, OpenAI-compatible embeddings into pgvector,
+cosine top-k search with Postgres FTS fallback over
+<code>kb_articles</code> and <code>rag_documents</code>, and ERP context
+joins (customers, orders, invoices, support tickets) baked into chat
+prompts.</li>
+<li>Built cost and safety controls so the production bot stays under
+budget on free-tier Groq Llama-3.1-8B-Instant: answer caching,
+intent-policy guardrails, escalation rules, monthly token budget
+tracker, retrieval cap of 3 chunks, output cap of 180 tokens.</li>
+<li>Wrote the embeddable React chat widget
+(<code>infigo-embed.js</code>) shipped on <a
+href="https://infigosolutions.com/">infigosolutions.com</a> and exposed
+a separate public chat API (<code>/chat/public</code>) with site-key
+auth and ingestion endpoints for KB updates.</li>
+<li>Authored the Neon Postgres migration suite (pgvector RAG, customer
+memory, KB FTS, chat history, auth-RAG, feed sync) and wrote the
+synthetic ERP seeder plus smoke-test harness used for local and Vercel
+UAT.</li>
+<li><strong>Stack</strong>: Python, FastAPI, async psycopg, Postgres
+with pgvector, Groq API, Vercel, WhatsApp Cloud API, Slack Events API,
+React.</li>
+</ul>
+<p><strong>AI Engineering Intern — Infigo Solutions</strong>, Islamabad,
+Pakistan <em>June 2025 – July 2025</em></p>
+<ul>
+<li>Built the first end-to-end prototype of what became Infigobot — a
+FastAPI chat backend wired to a Groq LLM with a curated knowledge-base
+seed for the company website (<a
+href="https://infigobot.vercel.app">infigobot.vercel.app</a>).</li>
+<li>Set up the initial Vercel deployment, the embedded chat widget,
+environment configuration, and the <code>/chat/public</code> site-key
+flow that the marketing team uses today.</li>
+<li>Wrote the first version of intent guardrails and answer caching that
+later evolved into the production budget tracker.</li>
+<li>Converted into a full-time Junior AI Engineer position based on this
+work.</li>
+</ul>
+<h2 id="projects">PROJECTS</h2>
+<p><strong>Adaptive Psychological Horror Gaming — Final Year
+Project</strong> · Team of 3 · Advisor: Dr. Muhammad Nouman Noor Repos:
+<a href="https://github.com/sameerasif189/fyp-video">fyp-video</a>
+(iteration 1) · <a
+href="https://github.com/sameerasif189/fyp-iteration-2">fyp-iteration-2</a>
+(iteration 2)</p>
+<ul>
+<li><em>Iteration 1 — Multimodal Stress Classifier</em> (my role: video
+model and Unity integration): trained facial-expression recognition
+models on 7 datasets (DFEW, FERV39k, FER2013, RAF-DB, CK+, Aff-Wild2,
+RAVDESS) mapped to a 4-class game schema (calm / stressed / fearful /
+panic) feeding a unified video + audio + heart-rate stress classifier
+consumed by a Unity game.</li>
+<li><em>Iteration 2 — Generative Horror-Asset Engine</em>: designed a
+stress-conditioned Fusion Generator (around 500K-param MLP,
+sub-millisecond GPU inference) emitting 30 parameters that drive audio,
+DSP, visual, camera, webcam-feed, and entity sub-systems. Trained a
+conditional WaveGAN (around 2M params) for horror audio and a
+conditional U-Net (around 3M params, 256x256, sub-5ms) for PBR texture
+corruption. Exported all models to ONNX for Unity Barracuda/Sentis.
+Built a real-time webcam face-distortion pipeline with peripheral-shadow
+injection and an asset ingestion pipeline (AmbientCG PBR, Freesound
+API).</li>
+<li><strong>Stack</strong>: PyTorch, ONNX, Hugging Face Transformers,
+librosa, OpenCV, pygame, panda3d, Unity.</li>
+</ul>
+<p><strong>Local Voice-Cloning Conversational Agent</strong> · <a
+href="https://github.com/sameerasif189/voice-agent">github.com/sameerasif189/voice-agent</a></p>
+<ul>
+<li>End-to-end voice chat pipeline: faster-whisper STT on CUDA → Groq
+Llama-3.1-8B → Spark-TTS 0.5B cloned-voice synthesis, fitting 16 GB VRAM
+with proactive warmup and on-demand unload.</li>
+<li>FastAPI backend with WebSocket streaming and a REST voice-registry
+API; React/Vite SPA with consent-gated voice upload, auto-transcription
+endpoint, and live cloned-speech playback.</li>
+<li>One-shot Windows setup script provisions a Miniconda env, clones
+Spark-TTS, downloads around 2 GB of weights, and configures native CUDA
+12.</li>
+<li><strong>Stack</strong>: Python, FastAPI, WebSockets, PyTorch,
+faster-whisper, Spark-TTS, Transformers, React, Vite.</li>
+</ul>
+<p><strong>Hybrid Wildlife Detection — Computer Vision Research
+Synthesis</strong> · <a
+href="https://github.com/sameerasif189/hybrid-wildlife-detection">github.com/sameerasif189/hybrid-wildlife-detection</a></p>
+<ul>
+<li>Designed a single 4.5M-parameter hybrid detector integrating
+techniques from three 2024 research papers — PyTorch-Wildlife (Beery et
+al.), YOLOv8 Camera Trap (Subedi et al.), and AI Wildlife Management
+(Mustafić et al.).</li>
+<li>EfficientNet-B0 backbone (timm) emitting multi-scale features at
+stages 2, 3, and 4, fused via a 1x1 conv bottleneck and gated by a
+learned spatial-attention map.</li>
+<li>Three task heads (multi-task learning): 21-class classification,
+bounding-box regression, and objectness scoring, with a hybrid loss
+combining cross-entropy, smooth-L1, and BCE.</li>
+<li>Trained on the Missouri Camera Traps dataset (COCO format) with a
+70/15/15 stratified split, an albumentations augmentation pipeline
+(color, blur, weather simulation, geometric, CoarseDropout), gradient
+accumulation, OneCycle LR, and early stopping — all tuned to fit a 6 GB
+RTX 3060.</li>
+<li>Comprehensive evaluation: per-class precision/recall/F1, confusion
+matrix, precision-recall curves, sample predictions with confidence
+overlays.</li>
+<li><strong>Stack</strong>: PyTorch, timm, albumentations, OpenCV,
+NumPy, matplotlib, seaborn, scikit-learn.</li>
+</ul>
+<p><strong>From-Scratch Transformer + RAG for Amazon Review
+Understanding</strong> · <a
+href="https://github.com/sameerasif189/Assignment3-nlp">github.com/sameerasif189/Assignment3-nlp</a></p>
+<ul>
+<li>Implemented a multi-task Transformer encoder (shared backbone, two
+heads) from scratch in PyTorch, achieving 82.04% sentiment accuracy and
+99.68% derived-feature accuracy on a 7,497-sample Amazon test set
+(34,981 train / 7,495 val, 30K vocabulary).</li>
+<li>Built a Transformer decoder from scratch for natural-language
+explanation generation with retrieval-augmented context (top-3 cosine
+nearest neighbours on encoder embeddings).</li>
+<li>Analyzed and reported the retrieval-vs-no-retrieval perplexity gap
+(74.95 vs 260.14) and root-caused it to context-length sensitivity in
+the small decoder.</li>
+</ul>
+<h2 id="education">EDUCATION</h2>
+<p><strong>National University of Computer and Emerging Sciences
+(FAST-NUCES), Islamabad</strong> — BS Artificial Intelligence, 2022 –
+2026 (Expected) Relevant coursework: Deep Learning, Natural Language
+Processing, Computer Vision, Generative AI, Databases, Operating
+Systems, Software Engineering, Data Structures and Algorithms,
+Probability and Statistics.</p>
+<p><strong>Beaconhouse School System</strong> — Cambridge A Levels, 2020
+– 2022</p>
+<p><strong>Beaconhouse School System</strong> — Cambridge O Levels, 2017
+– 2020</p>
+<h2 id="additional-projects">ADDITIONAL PROJECTS</h2>
+<ul>
+<li><strong>SIP — React/Vite web app</strong>: <a
+href="https://github.com/sameerasif189/SIP">github.com/sameerasif189/SIP</a>
+· live demo: <a
+href="https://sip-sooty.vercel.app">sip-sooty.vercel.app</a></li>
+<li><strong>Personal Portfolio (HTML)</strong>: <a
+href="https://github.com/sameerasif189/html-portfolio">github.com/sameerasif189/html-portfolio</a></li>
+</ul>
+</body>
+</html>
