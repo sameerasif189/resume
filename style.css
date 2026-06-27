@@ -1,8 +1,9 @@
 /*
-  ATS-friendly print stylesheet for RESUME.md — tuned for a dense ONE-PAGE layout.
-  - Single column, no images/tables/columns
+  ATS-friendly print stylesheet for RESUME.md — dense ONE-PAGE layout.
+  - Single column, no images/tables/columns (ATS-safe)
   - Standard Latin font (Calibri / Helvetica / Arial fallback)
-  - Selectable, copy-pasteable text; black on white for max parser compatibility
+  - Selectable, copy-pasteable text
+  - Centered header with a blue accent; black body text on white
 */
 
 @page {
@@ -13,56 +14,80 @@
 html, body {
   font-family: "Calibri", "Helvetica", "Arial", sans-serif;
   font-size: 10pt;
-  line-height: 1.22;
+  line-height: 1.25;
   color: #000;
   background: #fff;
   margin: 0;
   padding: 0;
 }
 
+/* ---------- Header (centered) ---------- */
+
 /* Name */
 h1 {
-  font-size: 19pt;
+  font-size: 23pt;
   font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
   margin: 0 0 2pt 0;
-  letter-spacing: 0.2pt;
+  letter-spacing: 0.3pt;
 }
 
-/* Contact line immediately after H1 */
+/* Professional title line (first paragraph after the name) */
 h1 + p {
-  margin: 0 0 5pt 0;
-  font-size: 9.5pt;
-}
-
-/* Section headings */
-h2 {
-  font-size: 10.5pt;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.4pt;
-  border-bottom: 0.6pt solid #000;
-  padding-bottom: 1pt;
-  margin: 7pt 0 3pt 0;
-}
-
-/* Job / project title lines */
-h3 {
-  font-size: 10pt;
-  font-weight: 700;
-  margin: 4pt 0 1pt 0;
-}
-
-p {
+  text-align: center;
+  color: #2b5fa6;
+  font-size: 11.5pt;
+  font-weight: 600;
   margin: 0 0 3pt 0;
 }
 
+/* Contact line (second paragraph after the name) */
+h1 + p + p {
+  text-align: center;
+  color: #000;
+  font-size: 9.5pt;
+  margin: 0 0 8pt 0;
+}
+
+/* ---------- Section headings (unchanged style) ---------- */
+h2 {
+  font-size: 11pt;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  letter-spacing: 0.5pt;
+  border-bottom: 0.8pt solid #2b5fa6;
+  padding-bottom: 1.5pt;
+  margin: 9pt 0 4pt 0;
+}
+
+/* ---------- Job / project / degree titles ---------- */
+h3 {
+  font-size: 10.5pt;
+  font-weight: 700;
+  color: #2b5fa6;
+  margin: 6pt 0 0 0;
+}
+
+/* Meta line directly under a title (company + dates, or repo + stack) */
+h3 + p {
+  font-size: 9.5pt;
+  color: #333;
+  margin: 0 0 2pt 0;
+}
+
+p {
+  margin: 0 0 4pt 0;
+}
+
 ul {
-  margin: 1pt 0 3pt 0;
-  padding-left: 14pt;
+  margin: 2pt 0 4pt 0;
+  padding-left: 15pt;
 }
 
 li {
-  margin: 0 0 1.5pt 0;
+  margin: 0 0 2.5pt 0;
 }
 
 strong { font-weight: 700; }
@@ -73,6 +98,9 @@ a, a:link, a:visited {
   color: #000;
   text-decoration: underline;
 }
+
+/* Links inside title meta lines pick up the muted color */
+h3 + p a { color: #333; }
 
 code {
   font-family: "Consolas", "Courier New", monospace;
