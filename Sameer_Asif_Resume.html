@@ -37,112 +37,101 @@ href="mailto:sameerasif189@gmail.com">sameerasif189@gmail.com</a> | <a
 href="https://github.com/sameerasif189">GitHub</a> | <a
 href="https://www.linkedin.com/in/sameer-asif-32113535b/">LinkedIn</a></p>
 <h2 id="summary">SUMMARY</h2>
-<p>AI Engineer and final-year BS Artificial Intelligence student at
-FAST-NUCES, building production LLM and RAG systems at Infigo Solutions.
-Experienced across the full lifecycle: data scraping and pipelines,
-model training (GANs, U-Nets, Transformers) in PyTorch, ONNX deployment,
-FastAPI services, and Postgres/SQL Server databases.</p>
+<p>Software and AI engineer and final-year BS Artificial Intelligence
+student at FAST-NUCES, currently building and maintaining production
+systems at Infigo Solutions. Comfortable across the full stack, from
+data pipelines and web scraping to backend APIs, databases, and machine
+learning models, with a focus on shipping work from prototype to
+deployment.</p>
 <h2 id="technical-skills">TECHNICAL SKILLS</h2>
 <ul>
-<li><strong>Languages:</strong> Python, SQL, C/C++,
-JavaScript/TypeScript, Bash</li>
-<li><strong>AI / ML:</strong> PyTorch, Hugging Face Transformers, GANs,
-U-Net, EfficientNet, multi-task learning, self-attention, RAG, pgvector,
-LoRA/SFT, prompt engineering</li>
-<li><strong>CV / Speech / NLP:</strong> OpenCV, timm, multi-scale
-detection, facial-expression recognition, faster-whisper, Spark-TTS,
-librosa, N-gram language models</li>
-<li><strong>Data / Backend:</strong> FastAPI, WebSockets, async Python,
-Playwright, SQL Server (pyodbc), Postgres (Neon) + pgvector, SQLAlchemy,
-pandas, NumPy</li>
-<li><strong>Deployment / Tools:</strong> ONNX Runtime, Unity
-Barracuda/Sentis, CUDA 12, Vercel, Docker, Git, Linux/WSL, React,
-Vite</li>
+<li><strong>Languages:</strong> Python, SQL, C/C++, JavaScript,
+TypeScript, Bash</li>
+<li><strong>Backend &amp; Data:</strong> FastAPI, REST APIs, WebSockets,
+async Python, Playwright, SQL Server, PostgreSQL, SQLAlchemy, pandas,
+NumPy</li>
+<li><strong>Machine Learning:</strong> PyTorch, Transformers, CNNs,
+GANs, computer vision, NLP, retrieval-augmented generation (RAG),
+ONNX</li>
+<li><strong>Frontend &amp; Tools:</strong> React, Vite, Git, Docker,
+Linux/WSL, Vercel, CUDA</li>
 </ul>
 <h2 id="experience">EXPERIENCE</h2>
 <p><strong>Junior AI Engineer</strong> | Infigo Solutions, Islamabad |
 July 2025 – Present</p>
 <ul>
-<li>Lead engineer for the customer-support agent platform — a
-multi-channel (web, WhatsApp, Slack) FastAPI app on Neon Postgres +
-pgvector, deployed on Vercel and live on infigosolutions.com.</li>
-<li>Built a hybrid RAG pipeline (chunking, embeddings, cosine + Postgres
-FTS search, ERP context joins) with cost/safety guardrails on Groq
-Llama-3.1-8B: answer caching, budget tracker, and retrieval/output
-caps.</li>
-<li>Shipped an embeddable React chat widget and public chat API;
-authored the Postgres migration suite, synthetic ERP seeder, and
-smoke-test harness.</li>
+<li>Lead developer of the company’s customer-support assistant, a
+multi-channel application (website, WhatsApp, and Slack) built with
+FastAPI and PostgreSQL and deployed on Vercel, now running live on
+infigosolutions.com.</li>
+<li>Designed the system that answers customer questions from the company
+knowledge base and ERP records, including caching, usage limits, and
+safeguards to keep running costs low and responses accurate.</li>
+<li>Built an embeddable chat widget and public API for the website, and
+wrote the database migrations, seed data, and tests used across
+releases.</li>
 </ul>
 <p><strong>AI Engineering Intern</strong> | Infigo Solutions, Islamabad
 | June 2025 – July 2025</p>
 <ul>
-<li>Built the first Infigobot prototype (FastAPI + Groq LLM + curated
-KB), the Vercel deployment, and the site-key auth flow used in
-production; promoted to full-time based on this work.</li>
+<li>Built a web-scraping pipeline (Clutch, Wellfound) that collected
+company and contact information at scale and loaded it into a normalized
+SQL Server database used by the sales team for lead generation.</li>
+<li>Added anti-bot handling and resumable progress tracking to keep long
+scraping runs reliable, plus regex-based extraction of emails, phone
+numbers, and LinkedIn profiles.</li>
+<li>Developed the first prototype of the support chatbot and set up its
+initial deployment and authentication, which led to a full-time
+offer.</li>
 </ul>
 <h2 id="projects">PROJECTS</h2>
 <p><strong>Adaptive Psychological Horror Game — Final Year
 Project</strong> | <a
 href="https://github.com/sameerasif189/fyp-iteration-2">GitHub</a></p>
 <ul>
-<li>Trained facial-expression recognition across 7 datasets (DFEW,
-FER2013, RAF-DB, CK+, Aff-Wild2, etc.) mapped to a 4-class stress schema
-feeding a unified video + audio + heart-rate classifier consumed by a
-Unity game.</li>
-<li>Built a stress-conditioned Fusion Generator (~500K-param MLP), a
-conditional WaveGAN for horror audio, and a U-Net for PBR texture
-corruption — all exported to ONNX for Unity Barracuda/Sentis.
-<em>(PyTorch, ONNX, OpenCV, Unity)</em></li>
+<li>Trained facial-expression recognition models on several public
+datasets and combined video, audio, and heart-rate signals into a single
+stress classifier that drives a Unity game.</li>
+<li>Built generative models (a parameter generator, an audio GAN, and a
+texture network) that adapt the game’s sound and visuals to player
+stress in real time, exported to ONNX for use in Unity.</li>
 </ul>
-<p><strong>Lead-Generation Scraping Engine &amp; SQL Data Bank</strong>
-| <a
-href="https://github.com/sameerasif189/lead-intelligence-scraper">GitHub</a></p>
-<ul>
-<li>Built an async Playwright scraping suite (Clutch, Wellfound) with
-custom anti-bot stealth patches to extract company profiles, reviews,
-and contact details at scale, with regex email/phone/LinkedIn
-enrichment.</li>
-<li>Designed a normalized SQL Server schema (Source → Organizations →
-Contacts → Reviews) with deduplication, foreign-key reconciliation, and
-incremental sync. <em>(Python, Playwright, SQL Server/pyodbc,
-pandas)</em></li>
-</ul>
-<p><strong>Local Voice-Cloning Conversational Agent</strong> | <a
+<p><strong>Voice-Cloning Conversational Agent</strong> | <a
 href="https://github.com/sameerasif189/voice-agent">GitHub</a></p>
 <ul>
-<li>End-to-end voice pipeline (faster-whisper STT → Groq Llama-3.1-8B →
-Spark-TTS cloned voice) in 16 GB VRAM; FastAPI + WebSockets backend and
-React/Vite SPA with consent-gated voice upload. <em>(FastAPI, PyTorch,
-Spark-TTS, React)</em></li>
+<li>Built a real-time voice chat system that transcribes speech,
+generates replies with a language model, and responds in a cloned voice,
+running locally on a single 16 GB GPU.</li>
+<li>FastAPI backend with WebSocket streaming and a React frontend for
+voice upload and live playback.</li>
 </ul>
 <p><strong>Hybrid Wildlife Detection</strong> | <a
 href="https://github.com/sameerasif189/hybrid-wildlife-detection">GitHub</a></p>
 <ul>
-<li>4.5M-param detector synthesizing 3 research papers: EfficientNet-B0
-multi-scale fusion + spatial attention + 3 task heads (classification,
-bbox, objectness), trained on Missouri Camera Traps tuned for a 6 GB
-GPU. <em>(PyTorch, timm, albumentations)</em></li>
+<li>Built a compact image detector that classifies animals and locates
+them in camera-trap photos across 21 species, combining techniques from
+three recent research papers and tuned to run on a 6 GB GPU.</li>
 </ul>
-<p><strong>From-Scratch Transformer + RAG (NLP)</strong> | <a
+<p><strong>Transformer and RAG from Scratch</strong> | <a
 href="https://github.com/sameerasif189/transformer-rag-from-scratch">GitHub</a></p>
 <ul>
-<li>Built a multi-task Transformer encoder/decoder from scratch (82%
-sentiment accuracy) with retrieval-augmented explanation generation and
-perplexity analysis. <em>(PyTorch, NumPy)</em></li>
+<li>Implemented a Transformer encoder and decoder from scratch in
+PyTorch for review sentiment classification (82% accuracy) and
+explanation generation, with a retrieval step over similar
+examples.</li>
 </ul>
-<p><strong>Additional:</strong> <a
-href="https://github.com/sameerasif189/urdu-ngram-text-generator">BBC
-Urdu N-gram text generator</a> (Streamlit); <a
-href="https://github.com/sameerasif189/sentinel-trading-bot">Sentinel
-adaptive trading bot</a> (Binance API, sentiment signals); <a
+<p><strong>Other:</strong> <a
+href="https://github.com/sameerasif189/urdu-ngram-text-generator">Urdu
+text generator</a> (statistical language models with a Streamlit app);
+<a href="https://github.com/sameerasif189/sentinel-trading-bot">Sentinel
+trading bot</a> (automated Binance trading with sentiment signals); <a
 href="https://github.com/sameerasif189/sip-calculator">SIP investment
-calculator</a> (React/Vite).</p>
+calculator</a> (React).</p>
 <h2 id="education">EDUCATION</h2>
 <p><strong>BS Artificial Intelligence</strong> | FAST-NUCES, Islamabad |
-2022 – 2026 (Expected) Coursework: Deep Learning, NLP, Computer Vision,
-Generative AI, Databases, Software Engineering, DSA, Probability &amp;
-Statistics</p>
+2022 – 2026 (Expected) Relevant coursework: Deep Learning, NLP, Computer
+Vision, Databases, Software Engineering, Data Structures &amp;
+Algorithms, Probability &amp; Statistics</p>
 <p><strong>Cambridge A Levels</strong> | Beaconhouse School System |
 2020 – 2022   |   <strong>Cambridge O Levels</strong> | Beaconhouse |
 2017 – 2020</p>
